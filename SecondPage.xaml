@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="HideSoftInputIssue.SecondPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    HideSoftInputOnTapped="True">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="10">
+            <Label Style="{StaticResource Headline}" Text="Entry" />
+            <Label Style="{StaticResource SubHeadline}" Text="You can input any characters on this Entry" />
+            <Entry HorizontalOptions="Fill" Text="This is Entry control. Please edit." />
+            <Button
+                x:Name="NavigateBtn"
+                Clicked="NavigateBtn_Clicked"
+                HeightRequest="40"
+                HorizontalOptions="Fill"
+                Text="Go to ThirdPage" />
+            <Border
+                x:Name="NavigateBorder"
+                Background="LightBlue"
+                HeightRequest="40">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Border.GestureRecognizers>
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="Go to ThirdPage by Border"
+                    VerticalTextAlignment="Center" />
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
